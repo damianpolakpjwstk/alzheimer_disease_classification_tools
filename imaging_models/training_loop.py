@@ -1,3 +1,4 @@
+"""Training loop for MRI classification CNN models."""
 from pathlib import Path
 
 import numpy as np
