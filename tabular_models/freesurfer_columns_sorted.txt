@@ -1,0 +1,373 @@
+ST100SV N mm3 Volume (aseg.stat) of RightNonWMHypoIntensities
+ST101SV N mm3 Volume (aseg.stat) of RightPallidum
+ST102CV N mm3 Volume (aparc.stat) of RightParacentral
+ST102SA N mm2 Surface Area of RightParacentral
+ST102TA N mm Cortical Thickness Average of RightParacentral
+ST102TS N mm Cortical Thickness Standard Deviation of RightParacentral
+ST103CV N mm3 Volume (aparc.stat) of RightParahippocampal
+ST103SA N mm2 Surface Area of RightParahippocampal
+ST103TA N mm Cortical Thickness Average of RightParahippocampal
+ST103TS N mm Cortical Thickness Standard Deviation of RightParahippocampal
+ST104CV N mm3 Volume (aparc.stat) of RightParsOpercularis
+ST104SA N mm2 Surface Area of RightParsOpercularis
+ST104TA N mm Cortical Thickness Average of RightParsOpercularis
+ST104TS N mm Cortical Thickness Standard Deviation of RightParsOpercularis
+ST105CV N mm3 Volume (aparc.stat) of RightParsOrbitalis
+ST105SA N mm2 Surface Area of RightParsOrbitalis
+ST105TA N mm Cortical Thickness Average of RightParsOrbitalis
+ST105TS N mm Cortical Thickness Standard Deviation of RightParsOrbitalis
+ST106CV N mm3 Volume (aparc.stat) of RightParsTriangularis
+ST106SA N mm2 Surface Area of RightParsTriangularis
+ST106TA N mm Cortical Thickness Average of RightParsTriangularis
+ST106TS N mm Cortical Thickness Standard Deviation of RightParsTriangularis
+ST107CV N mm3 Volume (aparc.stat) of RightPericalcarine
+ST107SA N mm2 Surface Area of RightPericalcarine
+ST107TA N mm Cortical Thickness Average of RightPericalcarine
+ST107TS N mm Cortical Thickness Standard Deviation of RightPericalcarine
+ST108CV N mm3 Volume (aparc.stat) of RightPostcentral
+ST108SA N mm2 Surface Area of RightPostcentral
+ST108TA N mm Cortical Thickness Average of RightPostcentral
+ST108TS N mm Cortical Thickness Standard Deviation of RightPostcentral
+ST109CV N mm3 Volume (aparc.stat) of RightPosteriorCingulate
+ST109SA N mm2 Surface Area of RightPosteriorCingulate
+ST109TA N mm Cortical Thickness Average of RightPosteriorCingulate
+ST109TS N mm Cortical Thickness Standard Deviation of RightPosteriorCingulate
+ST10CV N mm3 Volume (aparc.stat) of Icv
+ST110CV N mm3 Volume (aparc.stat) of RightPrecentral
+ST110SA N mm2 Surface Area of RightPrecentral
+ST110TA N mm Cortical Thickness Average of RightPrecentral
+ST110TS N mm Cortical Thickness Standard Deviation of RightPrecentral
+ST111CV N mm3 Volume (aparc.stat) of RightPrecuneus
+ST111SA N mm2 Surface Area of RightPrecuneus
+ST111TA N mm Cortical Thickness Average of RightPrecuneus
+ST111TS N mm Cortical Thickness Standard Deviation of RightPrecuneus
+ST112SV N mm3 Volume (aseg.stat) of RightPutamen
+ST113CV N mm3 Volume (aparc.stat) of RightRostralAnteriorCingulate
+ST113SA N mm2 Surface Area of RightRostralAnteriorCingulate
+ST113TA N mm Cortical Thickness Average of RightRostralAnteriorCingulate
+ST113TS N mm Cortical Thickness Standard Deviation of RightRostralAnteriorCingulate
+ST114CV N mm3 Volume (aparc.stat) of RightRostralMiddleFrontal
+ST114SA N mm2 Surface Area of RightRostralMiddleFrontal
+ST114TA N mm Cortical Thickness Average of RightRostralMiddleFrontal
+ST114TS N mm Cortical Thickness Standard Deviation of RightRostralMiddleFrontal
+ST115CV N mm3 Volume (aparc.stat) of RightSuperiorFrontal
+ST115SA N mm2 Surface Area of RightSuperiorFrontal
+ST115TA N mm Cortical Thickness Average of RightSuperiorFrontal
+ST115TS N mm Cortical Thickness Standard Deviation of RightSuperiorFrontal
+ST116CV N mm3 Volume (aparc.stat) of RightSuperiorParietal
+ST116SA N mm2 Surface Area of RightSuperiorParietal
+ST116TA N mm Cortical Thickness Average of RightSuperiorParietal
+ST116TS N mm Cortical Thickness Standard Deviation of RightSuperiorParietal
+ST117CV N mm3 Volume (aparc.stat) of RightSuperiorTemporal
+ST117SA N mm2 Surface Area of RightSuperiorTemporal
+ST117TA N mm Cortical Thickness Average of RightSuperiorTemporal
+ST117TS N mm Cortical Thickness Standard Deviation of RightSuperiorTemporal
+ST118CV N mm3 Volume (aparc.stat) of RightSupramarginal
+ST118SA N mm2 Surface Area of RightSupramarginal
+ST118TA N mm Cortical Thickness Average of RightSupramarginal
+ST118TS N mm Cortical Thickness Standard Deviation of RightSupramarginal
+ST119CV N mm3 Volume (aparc.stat) of RightTemporalPole
+ST119SA N mm2 Surface Area of RightTemporalPole
+ST119TA N mm Cortical Thickness Average of RightTemporalPole
+ST119TS N mm Cortical Thickness Standard Deviation of RightTemporalPole
+ST11SV N mm3 Volume (aseg.stat) of LeftAccumbensArea
+ST120SV N mm3 Volume (aseg.stat) of RightThalamus
+ST121CV N mm3 Volume (aparc.stat) of RightTransverseTemporal
+ST121SA N mm2 Surface Area of RightTransverseTemporal
+ST121TA N mm Cortical Thickness Average of RightTransverseTemporal
+ST121TS N mm Cortical Thickness Standard Deviation of RightTransverseTemporal
+ST122SV N mm3 Volume (aseg.stat) of RightUndetermined
+ST123CV N mm3 Volume (aparc.stat) of RightUnknown
+ST123SA N mm2 Surface Area of RightUnknown
+ST123TA N mm Cortical Thickness Average of RightUnknown
+ST123TS N mm Cortical Thickness Standard Deviation of RightUnknown
+ST124SV N mm3 Volume (aseg.stat) of RightVentralDC
+ST125SV N mm3 Volume (aseg.stat) of RightVessel
+ST126SV N mm3 Volume (aseg.stat) of RightWMHypoIntensities
+ST127SV N mm3 Volume (aseg.stat) of ThirdVentricle
+ST128SV N mm3 Volume (aseg.stat) of WMHypoIntensities
+ST129CV N mm3 Volume (aparc.stat) of LeftInsula
+ST129SA N mm2 Surface Area of LeftInsula
+ST129TA N mm Cortical Thickness Average of LeftInsula
+ST129TS N mm Cortical Thickness Standard Deviation of LeftInsula
+ST12SV N mm3 Volume (aseg.stat) of LeftAmygdala
+ST130CV N mm3 Volume (aparc.stat) of RightInsula
+ST130SA N mm2 Surface Area of RightInsula
+ST130TA N mm Cortical Thickness Average of RightInsula
+ST130TS N mm Cortical Thickness Standard Deviation of RightInsula
+ST131HS N mm3 Hippocampal Subfields Volume of LeftCA1
+ST132HS N mm3 Hippocampal Subfields Volume of LeftCA2_3
+ST133HS N mm3 Hippocampal Subfields Volume of LeftCA4_DG
+ST134HS N mm3 Hippocampal Subfields Volume of LeftFimbria
+ST135HS N mm3 Hippocampal Subfields Volume of LeftHippocampalFissure
+ST136HS N mm3 Hippocampal Subfields Volume of LeftPresubiculum
+ST137HS N mm3 Hippocampal Subfields Volume of LeftSubiculum
+ST138HS N mm3 Hippocampal Subfields Volume of LeftTail
+ST139HS N mm3 Hippocampal Subfields Volume of RightCA1
+ST13CV N mm3 Volume (aparc.stat) of LeftBankssts
+ST13SA N mm2 Surface Area of LeftBankssts
+ST13TA N mm Cortical Thickness Average of LeftBankssts
+ST13TS N mm Cortical Thickness Standard Deviation of LeftBankssts
+ST140HS N mm3 Hippocampal Subfields Volume of RightCA2_3
+ST141HS N mm3 Hippocampal Subfields Volume of RightCA4_DG
+ST142HS N mm3 Hippocampal Subfields Volume of RightFimbria
+ST143HS N mm3 Hippocampal Subfields Volume of RightHippocampalFissure
+ST144HS N mm3 Hippocampal Subfields Volume of RightPresubiculum
+ST145HS N mm3 Hippocampal Subfields Volume of RightSubiculum
+ST146HS N mm3 Hippocampal Subfields Volume of RightTail
+ST147SV N mm3 Volume (aseg.stat) of LeftCorticalGM
+ST148SV N mm3 Volume (aseg.stat) of RightCorticalGM
+ST149SV N mm3 Volume (aseg.stat) of CorticalGM
+ST14CV N mm3 Volume (aparc.stat) of LeftCaudalAnteriorCingulate
+ST14SA N mm2 Surface Area of LeftCaudalAnteriorCingulate
+ST14TA N mm Cortical Thickness Average of LeftCaudalAnteriorCingulate
+ST14TS N mm Cortical Thickness Standard Deviation of LeftCaudalAnteriorCingulate
+ST150SV N mm3 Volume (aseg.stat) of LeftCorticalWM
+ST151SV N mm3 Volume (aseg.stat) of RightCorticalWM
+ST152SV N mm3 Volume (aseg.stat) of CorticalWM
+ST153SV N mm3 Volume (aseg.stat) of SubcorticalGM
+ST154SV N mm3 Volume (aseg.stat) of TotalGM
+ST155SV N mm3 Volume (aseg.stat) of SupraTentorial
+ST15CV N mm3 Volume (aparc.stat) of LeftCaudalMiddleFrontal
+ST15SA N mm2 Surface Area of LeftCaudalMiddleFrontal
+ST15TA N mm Cortical Thickness Average of LeftCaudalMiddleFrontal
+ST15TS N mm Cortical Thickness Standard Deviation of LeftCaudalMiddleFrontal
+ST16SV N mm3 Volume (aseg.stat) of LeftCaudate
+ST17SV N mm3 Volume (aseg.stat) of LeftCerebellumCortex
+ST18SV N mm3 Volume (aseg.stat) of LeftCerebellumWM
+ST19SV N mm3 Volume (aseg.stat) of LeftCerebralCortex
+ST1SV N mm3 Volume (aseg.stat) of Brainstem
+ST20SV N mm3 Volume (aseg.stat) of LeftCerebralWM
+ST21SV N mm3 Volume (aseg.stat) of LeftChoroidPlexus
+ST22CV N mm3 Volume (aparc.stat) of LeftCorpusCallosum
+ST22SA N mm2 Surface Area of LeftCorpusCallosum
+ST22TA N mm Cortical Thickness Average of LeftCorpusCallosum
+ST22TS N mm Cortical Thickness Standard Deviation of LeftCorpusCallosum
+ST23CV N mm3 Volume (aparc.stat) of LeftCuneus
+ST23SA N mm2 Surface Area of LeftCuneus
+ST23TA N mm Cortical Thickness Average of LeftCuneus
+ST23TS N mm Cortical Thickness Standard Deviation of LeftCuneus
+ST24CV N mm3 Volume (aparc.stat) of LeftEntorhinal
+ST24SA N mm2 Surface Area of LeftEntorhinal
+ST24TA N mm Cortical Thickness Average of LeftEntorhinal
+ST24TS N mm Cortical Thickness Standard Deviation of LeftEntorhinal
+ST25CV N mm3 Volume (aparc.stat) of LeftFrontalPole
+ST25SA N mm2 Surface Area of LeftFrontalPole
+ST25TA N mm Cortical Thickness Average of LeftFrontalPole
+ST25TS N mm Cortical Thickness Standard Deviation of LeftFrontalPole
+ST26CV N mm3 Volume (aparc.stat) of LeftFusiform
+ST26SA N mm2 Surface Area of LeftFusiform
+ST26TA N mm Cortical Thickness Average of LeftFusiform
+ST26TS N mm Cortical Thickness Standard Deviation of LeftFusiform
+ST27SA N mm2 Surface Area of LeftHemisphere
+ST28CV N mm3 Volume (aparc.stat) of LeftHemisphereWM
+ST28SA N mm2 Surface Area of LeftHemisphereWM
+ST29SV N mm3 Volume (aseg.stat) of LeftHippocampus
+ST2SV N mm3 Volume (aseg.stat) of CorpusCallosumAnterior
+ST30SV N mm3 Volume (aseg.stat) of LeftInferiorLateralVentricle
+ST31CV N mm3 Volume (aparc.stat) of LeftInferiorParietal
+ST31SA N mm2 Surface Area of LeftInferiorParietal
+ST31TA N mm Cortical Thickness Average of LeftInferiorParietal
+ST31TS N mm Cortical Thickness Standard Deviation of LeftInferiorParietal
+ST32CV N mm3 Volume (aparc.stat) of LeftInferiorTemporal
+ST32SA N mm2 Surface Area of LeftInferiorTemporal
+ST32TA N mm Cortical Thickness Average of LeftInferiorTemporal
+ST32TS N mm Cortical Thickness Standard Deviation of LeftInferiorTemporal
+ST33SV N mm3 Volume (aseg.stat) of LeftInterior
+ST34CV N mm3 Volume (aparc.stat) of LeftIsthmusCingulate
+ST34SA N mm2 Surface Area of LeftIsthmusCingulate
+ST34TA N mm Cortical Thickness Average of LeftIsthmusCingulate
+ST34TS N mm Cortical Thickness Standard Deviation of LeftIsthmusCingulate
+ST35CV N mm3 Volume (aparc.stat) of LeftLateralOccipital
+ST35SA N mm2 Surface Area of LeftLateralOccipital
+ST35TA N mm Cortical Thickness Average of LeftLateralOccipital
+ST35TS N mm Cortical Thickness Standard Deviation of LeftLateralOccipital
+ST36CV N mm3 Volume (aparc.stat) of LeftLateralOrbitofrontal
+ST36SA N mm2 Surface Area of LeftLateralOrbitofrontal
+ST36TA N mm Cortical Thickness Average of LeftLateralOrbitofrontal
+ST36TS N mm Cortical Thickness Standard Deviation of LeftLateralOrbitofrontal
+ST37SV N mm3 Volume (aseg.stat) of LeftLateralVentricle
+ST38CV N mm3 Volume (aparc.stat) of LeftLingual
+ST38SA N mm2 Surface Area of LeftLingual
+ST38TA N mm Cortical Thickness Average of LeftLingual
+ST38TS N mm Cortical Thickness Standard Deviation of LeftLingual
+ST39CV N mm3 Volume (aparc.stat) of LeftMedialOrbitofrontal
+ST39SA N mm2 Surface Area of LeftMedialOrbitofrontal
+ST39TA N mm Cortical Thickness Average of LeftMedialOrbitofrontal
+ST39TS N mm Cortical Thickness Standard Deviation of LeftMedialOrbitofrontal
+ST3SV N mm3 Volume (aseg.stat) of CorpusCallosumCentral
+ST40CV N mm3 Volume (aparc.stat) of LeftMiddleTemporal
+ST40SA N mm2 Surface Area of LeftMiddleTemporal
+ST40TA N mm Cortical Thickness Average of LeftMiddleTemporal
+ST40TS N mm Cortical Thickness Standard Deviation of LeftMiddleTemporal
+ST41SV N mm3 Volume (aseg.stat) of LeftNonWMHypoIntensities
+ST42SV N mm3 Volume (aseg.stat) of LeftPallidum
+ST43CV N mm3 Volume (aparc.stat) of LeftParacentral
+ST43SA N mm2 Surface Area of LeftParacentral
+ST43TA N mm Cortical Thickness Average of LeftParacentral
+ST43TS N mm Cortical Thickness Standard Deviation of LeftParacentral
+ST44CV N mm3 Volume (aparc.stat) of LeftParahippocampal
+ST44SA N mm2 Surface Area of LeftParahippocampal
+ST44TA N mm Cortical Thickness Average of LeftParahippocampal
+ST44TS N mm Cortical Thickness Standard Deviation of LeftParahippocampal
+ST45CV N mm3 Volume (aparc.stat) of LeftParsOpercularis
+ST45SA N mm2 Surface Area of LeftParsOpercularis
+ST45TA N mm Cortical Thickness Average of LeftParsOpercularis
+ST45TS N mm Cortical Thickness Standard Deviation of LeftParsOpercularis
+ST46CV N mm3 Volume (aparc.stat) of LeftParsOrbitalis
+ST46SA N mm2 Surface Area of LeftParsOrbitalis
+ST46TA N mm Cortical Thickness Average of LeftParsOrbitalis
+ST46TS N mm Cortical Thickness Standard Deviation of LeftParsOrbitalis
+ST47CV N mm3 Volume (aparc.stat) of LeftParsTriangularis
+ST47SA N mm2 Surface Area of LeftParsTriangularis
+ST47TA N mm Cortical Thickness Average of LeftParsTriangularis
+ST47TS N mm Cortical Thickness Standard Deviation of LeftParsTriangularis
+ST48CV N mm3 Volume (aparc.stat) of LeftPericalcarine
+ST48SA N mm2 Surface Area of LeftPericalcarine
+ST48TA N mm Cortical Thickness Average of LeftPericalcarine
+ST48TS N mm Cortical Thickness Standard Deviation of LeftPericalcarine
+ST49CV N mm3 Volume (aparc.stat) of LeftPostcentral
+ST49SA N mm2 Surface Area of LeftPostcentral
+ST49TA N mm Cortical Thickness Average of LeftPostcentral
+ST49TS N mm Cortical Thickness Standard Deviation of LeftPostcentral
+ST4SV N mm3 Volume (aseg.stat) of CorpusCallosumMidAnterior
+ST50CV N mm3 Volume (aparc.stat) of LeftPosteriorCingulate
+ST50SA N mm2 Surface Area of LeftPosteriorCingulate
+ST50TA N mm Cortical Thickness Average of LeftPosteriorCingulate
+ST50TS N mm Cortical Thickness Standard Deviation of LeftPosteriorCingulate
+ST51CV N mm3 Volume (aparc.stat) of LeftPrecentral
+ST51SA N mm2 Surface Area of LeftPrecentral
+ST51TA N mm Cortical Thickness Average of LeftPrecentral
+ST51TS N mm Cortical Thickness Standard Deviation of LeftPrecentral
+ST52CV N mm3 Volume (aparc.stat) of LeftPrecuneus
+ST52SA N mm2 Surface Area of LeftPrecuneus
+ST52TA N mm Cortical Thickness Average of LeftPrecuneus
+ST52TS N mm Cortical Thickness Standard Deviation of LeftPrecuneus
+ST53SV N mm3 Volume (aseg.stat) of LeftPutamen
+ST54CV N mm3 Volume (aparc.stat) of LeftRostralAnteriorCingulate
+ST54SA N mm2 Surface Area of LeftRostralAnteriorCingulate
+ST54TA N mm Cortical Thickness Average of LeftRostralAnteriorCingulate
+ST54TS N mm Cortical Thickness Standard Deviation of LeftRostralAnteriorCingulate
+ST55CV N mm3 Volume (aparc.stat) of LeftRostralMiddleFrontal
+ST55SA N mm2 Surface Area of LeftRostralMiddleFrontal
+ST55TA N mm Cortical Thickness Average of LeftRostralMiddleFrontal
+ST55TS N mm Cortical Thickness Standard Deviation of LeftRostralMiddleFrontal
+ST56CV N mm3 Volume (aparc.stat) of LeftSuperiorFrontal
+ST56SA N mm2 Surface Area of LeftSuperiorFrontal
+ST56TA N mm Cortical Thickness Average of LeftSuperiorFrontal
+ST56TS N mm Cortical Thickness Standard Deviation of LeftSuperiorFrontal
+ST57CV N mm3 Volume (aparc.stat) of LeftSuperiorParietal
+ST57SA N mm2 Surface Area of LeftSuperiorParietal
+ST57TA N mm Cortical Thickness Average of LeftSuperiorParietal
+ST57TS N mm Cortical Thickness Standard Deviation of LeftSuperiorParietal
+ST58CV N mm3 Volume (aparc.stat) of LeftSuperiorTemporal
+ST58SA N mm2 Surface Area of LeftSuperiorTemporal
+ST58TA N mm Cortical Thickness Average of LeftSuperiorTemporal
+ST58TS N mm Cortical Thickness Standard Deviation of LeftSuperiorTemporal
+ST59CV N mm3 Volume (aparc.stat) of LeftSupramarginal
+ST59SA N mm2 Surface Area of LeftSupramarginal
+ST59TA N mm Cortical Thickness Average of LeftSupramarginal
+ST59TS N mm Cortical Thickness Standard Deviation of LeftSupramarginal
+ST5SV N mm3 Volume (aseg.stat) of CorpusCallosumMidPosterior
+ST60CV N mm3 Volume (aparc.stat) of LeftTemporalPole
+ST60SA N mm2 Surface Area of LeftTemporalPole
+ST60TA N mm Cortical Thickness Average of LeftTemporalPole
+ST60TS N mm Cortical Thickness Standard Deviation of LeftTemporalPole
+ST61SV N mm3 Volume (aseg.stat) of LeftThalamus
+ST62CV N mm3 Volume (aparc.stat) of LeftTransverseTemporal
+ST62SA N mm2 Surface Area of LeftTransverseTemporal
+ST62TA N mm Cortical Thickness Average of LeftTransverseTemporal
+ST62TS N mm Cortical Thickness Standard Deviation of LeftTransverseTemporal
+ST63SV N mm3 Volume (aseg.stat) of LeftUndetermined
+ST64CV N mm3 Volume (aparc.stat) of LeftUnknown
+ST64SA N mm2 Surface Area of LeftUnknown
+ST64TA N mm Cortical Thickness Average of LeftUnknown
+ST64TS N mm Cortical Thickness Standard Deviation of LeftUnknown
+ST65SV N mm3 Volume (aseg.stat) of LeftVentralDC
+ST66SV N mm3 Volume (aseg.stat) of LeftVessel
+ST67SV N mm3 Volume (aseg.stat) of LeftWMHypoIntensities
+ST68SV N mm3 Volume (aseg.stat) of NonWMHypoIntensities
+ST69SV N mm3 Volume (aseg.stat) of OpticChiasm
+ST6SV N mm3 Volume (aseg.stat) of CorpusCallosumPosterior
+ST70SV N mm3 Volume (aseg.stat) of RightAccumbensArea
+ST71SV N mm3 Volume (aseg.stat) of RightAmygdala
+ST72CV N mm3 Volume (aparc.stat) of RightBankssts
+ST72SA N mm2 Surface Area of RightBankssts
+ST72TA N mm Cortical Thickness Average of RightBankssts
+ST72TS N mm Cortical Thickness Standard Deviation of RightBankssts
+ST73CV N mm3 Volume (aparc.stat) of RightCaudalAnteriorCingulate
+ST73SA N mm2 Surface Area of RightCaudalAnteriorCingulate
+ST73TA N mm Cortical Thickness Average of RightCaudalAnteriorCingulate
+ST73TS N mm Cortical Thickness Standard Deviation of RightCaudalAnteriorCingulate
+ST74CV N mm3 Volume (aparc.stat) of RightCaudalMiddleFrontal
+ST74SA N mm2 Surface Area of RightCaudalMiddleFrontal
+ST74TA N mm Cortical Thickness Average of RightCaudalMiddleFrontal
+ST74TS N mm Cortical Thickness Standard Deviation of RightCaudalMiddleFrontal
+ST75SV N mm3 Volume (aseg.stat) of RightCaudate
+ST76SV N mm3 Volume (aseg.stat) of RightCerebellumCortex
+ST77SV N mm3 Volume (aseg.stat) of RightCerebellumWM
+ST78SV N mm3 Volume (aseg.stat) of RightCerebralCortex
+ST79SV N mm3 Volume (aseg.stat) of RightCerebralWM
+ST7SV N mm3 Volume (aseg.stat) of Csf
+ST80SV N mm3 Volume (aseg.stat) of RightChoroidPlexus
+ST81CV N mm3 Volume (aparc.stat) of RightCorpusCallosum
+ST81SA N mm2 Surface Area of RightCorpusCallosum
+ST81TA N mm Cortical Thickness Average of RightCorpusCallosum
+ST81TS N mm Cortical Thickness Standard Deviation of RightCorpusCallosum
+ST82CV N mm3 Volume (aparc.stat) of RightCuneus
+ST82SA N mm2 Surface Area of RightCuneus
+ST82TA N mm Cortical Thickness Average of RightCuneus
+ST82TS N mm Cortical Thickness Standard Deviation of RightCuneus
+ST83CV N mm3 Volume (aparc.stat) of RightEntorhinal
+ST83SA N mm2 Surface Area of RightEntorhinal
+ST83TA N mm Cortical Thickness Average of RightEntorhinal
+ST83TS N mm Cortical Thickness Standard Deviation of RightEntorhinal
+ST84CV N mm3 Volume (aparc.stat) of RightFrontalPole
+ST84SA N mm2 Surface Area of RightFrontalPole
+ST84TA N mm Cortical Thickness Average of RightFrontalPole
+ST84TS N mm Cortical Thickness Standard Deviation of RightFrontalPole
+ST85CV N mm3 Volume (aparc.stat) of RightFusiform
+ST85SA N mm2 Surface Area of RightFusiform
+ST85TA N mm Cortical Thickness Average of RightFusiform
+ST85TS N mm Cortical Thickness Standard Deviation of RightFusiform
+ST86SA N mm2 Surface Area of RightHemisphere
+ST87CV N mm3 Volume (aparc.stat) of RightHemisphereWM
+ST87SA N mm2 Surface Area of RightHemisphereWM
+ST88SV N mm3 Volume (aseg.stat) of RightHippocampus
+ST89SV N mm3 Volume (aseg.stat) of RightInferiorLateralVentricle
+ST8SV N mm3 Volume (aseg.stat) of FifthVentricle
+ST90CV N mm3 Volume (aparc.stat) of RightInferiorParietal
+ST90SA N mm2 Surface Area of RightInferiorParietal
+ST90TA N mm Cortical Thickness Average of RightInferiorParietal
+ST90TS N mm Cortical Thickness Standard Deviation of RightInferiorParietal
+ST91CV N mm3 Volume (aparc.stat) of RightInferiorTemporal
+ST91SA N mm2 Surface Area of RightInferiorTemporal
+ST91TA N mm Cortical Thickness Average of RightInferiorTemporal
+ST91TS N mm Cortical Thickness Standard Deviation of RightInferiorTemporal
+ST92SV N mm3 Volume (aseg.stat) of RightInterior
+ST93CV N mm3 Volume (aparc.stat) of RightIsthmusCingulate
+ST93SA N mm2 Surface Area of RightIsthmusCingulate
+ST93TA N mm Cortical Thickness Average of RightIsthmusCingulate
+ST93TS N mm Cortical Thickness Standard Deviation of RightIsthmusCingulate
+ST94CV N mm3 Volume (aparc.stat) of RightLateralOccipital
+ST94SA N mm2 Surface Area of RightLateralOccipital
+ST94TA N mm Cortical Thickness Average of RightLateralOccipital
+ST94TS N mm Cortical Thickness Standard Deviation of RightLateralOccipital
+ST95CV N mm3 Volume (aparc.stat) of RightLateralOrbitofrontal
+ST95SA N mm2 Surface Area of RightLateralOrbitofrontal
+ST95TA N mm Cortical Thickness Average of RightLateralOrbitofrontal
+ST95TS N mm Cortical Thickness Standard Deviation of RightLateralOrbitofrontal
+ST96SV N mm3 Volume (aseg.stat) of RightLateralVentricle
+ST97CV N mm3 Volume (aparc.stat) of RightLingual
+ST97SA N mm2 Surface Area of RightLingual
+ST97TA N mm Cortical Thickness Average of RightLingual
+ST97TS N mm Cortical Thickness Standard Deviation of RightLingual
+ST98CV N mm3 Volume (aparc.stat) of RightMedialOrbitofrontal
+ST98SA N mm2 Surface Area of RightMedialOrbitofrontal
+ST98TA N mm Cortical Thickness Average of RightMedialOrbitofrontal
+ST98TS N mm Cortical Thickness Standard Deviation of RightMedialOrbitofrontal
+ST99CV N mm3 Volume (aparc.stat) of RightMiddleTemporal
+ST99SA N mm2 Surface Area of RightMiddleTemporal
+ST99TA N mm Cortical Thickness Average of RightMiddleTemporal
+ST99TS N mm Cortical Thickness Standard Deviation of RightMiddleTemporal
+ST9SV N mm3 Volume (aseg.stat) of FourthVentricle

@@ -1,0 +1,3 @@
+[submodule "imaging_models/pseudo3d_pytorch"]
+	path = imaging_models/pseudo3d_pytorch
+	url = https://github.com/damianpolakpjwstk/pseudo3d_pytorch
