@@ -64,7 +64,7 @@ TODO: add explanation of the CNN models with Grad-CAM visualization.
 
 ### Installation
 
-Repository uses Python 3.10. 
+Repository uses Python 3.10 and Pytorch 2.0.1. It was tested on Ubuntu 20.04.
 
 To use the code, you need to install the following tools:
 
@@ -72,6 +72,7 @@ To use the code, you need to install the following tools:
 * ANTs (http://stnava.github.io/ANTs/)
 * HD-BET (https://github.com/MIC-DKFZ/HD-BET)
 * Python packages from `requirements.txt` file
+* Download submodules with `git submodule update --init --recursive`
+* Install pseudo3d_pytorch requirements
 
 After installing the tools, you need to set the paths to the tools in `scans_preparation/configuration.py` file.
-
