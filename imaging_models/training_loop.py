@@ -94,9 +94,11 @@ def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
             ground_truths.extend(labels.cpu().flatten().numpy())
             balanced_accuracy = balanced_accuracy_score(ground_truths, results, adjusted=False)
             prbar.set_description(
-                f"Epoch: {epoch}, LR: {scheduler.get_last_lr()} Step loss: {loss.item()},  Step acc: {step_score},"
-                f" Train Accuracy: {train_acc / (i * batch_size)}, Balanced Accuracy: {balanced_accuracy},"
-                f" Running Loss: {running_loss / i}")
+                f"Epoch: {epoch}, LR: {scheduler.get_last_lr()} Step loss: {round(loss.item(), 3)}, "
+                f"Step acc: {round(step_score, 3)}, "
+                f"Train Accuracy: {round(train_acc / (i * batch_size), 3)}, "
+                f"Balanced Accuracy: {round(balanced_accuracy, 3)}, "
+                f"Running Loss: {round(running_loss / i, 3)}")
             i += 1
         history["train_loss"].append(running_loss / len(train_dataset))
         history["train_balanced_accuracy"].append(balanced_accuracy)
@@ -126,9 +128,10 @@ def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
                 ground_truths.extend(labels.cpu().flatten().numpy())
                 balanced_accuracy = balanced_accuracy_score(ground_truths, results, adjusted=False)
                 prbar.set_description(
-                    f"Validation Loss - item: {loss.item()}, "
-                    f"Validation Accuracy: {val_acc / (i * batch_size)}, Balanced accuracy: {balanced_accuracy}, "
-                    f"Running Loss: {loss_running_valid / i}")
+                    f"Validation Loss - item: {round(loss.item(), 3)}, "
+                    f"Validation Accuracy: {round(val_acc / (i * batch_size), 3)}, "
+                    f"Balanced accuracy: {round(balanced_accuracy, 3)}, "
+                    f"Running Loss: {round(loss_running_valid / i, 3)}")
         scheduler.step()
         save_best(loss_running_valid / len_valid_dataset, epoch, model)
         history["valid_loss"].append(loss_running_valid / len_valid_dataset)

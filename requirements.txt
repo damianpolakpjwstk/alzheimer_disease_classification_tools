@@ -16,3 +16,4 @@ tqdm
 xgboost
 jupyter
 notebook
+medcam
