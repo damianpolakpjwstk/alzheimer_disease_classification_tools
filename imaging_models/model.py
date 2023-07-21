@@ -10,7 +10,7 @@ from pseudo3d_pytorch.src.blocks import P3DBlockTypeA, P3DBlockTypeB, P3DBlockTy
 class MultiScaleStem(nn.Module):
     """
     Multiscale stem block for MRI classification. It consists of three Pseudo-3D ResNet-like blocks with different
-    dilation rates (1, 2, 3) and a max pooling layer. The output of the block is concatenated in filter dimenstion
+    dilation rates (1, 2, 3) and a max pooling layer. The output of the block is concatenated in filter dimension
     and passed through a 1x1x1 convolution to reduce the number of channels.
 
     It is inspired by the network from "Multi-scale attention-based pseudo-3D convolution neural network
@@ -116,6 +116,17 @@ class MRINet(nn.Module):
         x = self.global_pool(x)
         x = self.classifier(x)
         return x
+
+    def freeze(self):
+        """Freeze all layers except the last fully connected layer."""
+        for name, param in self.named_parameters():
+            if "classifier" not in name:
+                param.requires_grad = False
+
+    def unfreeze(self):
+        """Unfreeze all layers."""
+        for name, param in self.named_parameters():
+            param.requires_grad = True
 
 
 if __name__ == "__main__":

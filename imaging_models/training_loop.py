@@ -38,6 +38,7 @@ class SaveBestModelLoss:
             print(f"\nSaving best model for epoch: {epoch+1}\n")
             torch.save(model.state_dict(), str(Path(self.save_path, f'best_model.pth')))
 
+
 class SaveBestModelAccuracy:
     """
     Save the best model while training.
@@ -72,7 +73,7 @@ class SaveBestModelAccuracy:
 def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
                       valid_dataset: torch.utils.data.Dataset, num_epochs: int, optimizer: torch.optim.Optimizer,
                       scheduler: torch.optim.lr_scheduler, save_directory: str | Path,
-                      batch_size: int) -> dict[str, list[float]]:
+                      batch_size: int, finetune: bool = False) -> dict[str, list[float]]:
     """
     Train model.
 
@@ -84,6 +85,8 @@ def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
     :param scheduler: Learning rate scheduler.
     :param batch_size: Batch size.
     :param save_directory: Directory to save best model to.
+    :param finetune: If True, freeze all layers except the last one at the beginning of training. After one epoch,
+    unfreeze all layers.
     :return: History of training.
     """
     history = {
@@ -94,7 +97,8 @@ def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
     }
 
     save_best = SaveBestModelAccuracy(save_directory)
-
+    if finetune:
+        model.freeze()
     for epoch in range(num_epochs):
         train_dataset.shuffle()
         valid_dataset.shuffle()
@@ -102,9 +106,11 @@ def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
         train_acc, val_acc, balanced_accuracy, running_loss = 0.0, 0.0, 0.0, 0.0
         model.train()
         prbar = tqdm(train_dataset, leave=True)
-        i = 1
+        step = 1
         results, ground_truths = [], []
         for data in prbar:
+            if finetune and epoch == 1:
+                model.unfreeze()
             criterion = torch.nn.CrossEntropyLoss()
             inputs, labels = data
             optimizer.zero_grad()
@@ -126,10 +132,10 @@ def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
             prbar.set_description(
                 f"Epoch: {epoch}, LR: {scheduler.get_last_lr()} Step loss: {round(loss.item(), 3)}, "
                 f"Step acc: {round(step_score, 3)}, "
-                f"Train Accuracy: {round(train_acc / (i * batch_size), 3)}, "
+                f"Train Accuracy: {round(train_acc / (step * batch_size), 3)}, "
                 f"Balanced Accuracy: {round(balanced_accuracy, 3)}, "
-                f"Running Loss: {round(running_loss / i, 3)}")
-            i += 1
+                f"Running Loss: {round(running_loss / step, 3)}")
+            step += 1
         history["train_loss"].append(running_loss / len(train_dataset))
         history["train_balanced_accuracy"].append(balanced_accuracy)
 
@@ -140,7 +146,7 @@ def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
         with torch.no_grad():
             prbar = tqdm(valid_dataset, leave=True)
             loss_running_valid = 0
-            i = 0
+            step = 0
             for data in prbar:
                 criterion = torch.nn.CrossEntropyLoss()
                 inputs, labels = data
@@ -153,15 +159,15 @@ def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
                                             probabilities.to("cpu").flatten().numpy(), normalize=False)
                 val_acc += step_score
                 loss_running_valid += loss.item()
-                i += 1
+                step += 1
                 results.extend(probabilities.to("cpu").flatten().numpy())
                 ground_truths.extend(labels.cpu().flatten().numpy())
                 balanced_accuracy = balanced_accuracy_score(ground_truths, results, adjusted=False)
                 prbar.set_description(
                     f"Validation Loss - item: {round(loss.item(), 3)}, "
-                    f"Validation Accuracy: {round(val_acc / (i * batch_size), 3)}, "
+                    f"Validation Accuracy: {round(val_acc / (step * batch_size), 3)}, "
                     f"Balanced accuracy: {round(balanced_accuracy, 3)}, "
-                    f"Running Loss: {round(loss_running_valid / i, 3)}")
+                    f"Running Loss: {round(loss_running_valid / step, 3)}")
         scheduler.step()
         save_best(balanced_accuracy, epoch, model)
         history["valid_loss"].append(loss_running_valid / len_valid_dataset)
