@@ -29,13 +29,9 @@ class Mri3DDataLoader(torch.utils.data.Dataset):
 
         if augment:
             self.augment = tio.Compose([
-                tio.OneOf([
-                    tio.RandomAffine(p=1.0),
-                    tio.RandomElasticDeformation(p=1.0),
-                ], p=0.5),
-                tio.RandomNoise(p=1.0),
-                tio.RandomGamma(p=1.0),
-                tio.RandomSwap(p=0.2)
+                tio.RandomAffine(p=0.5),
+                tio.RandomGamma(p=0.5),
+                tio.RandomSwap(p=0.5)
             ])
         else:
             self.augment = None
