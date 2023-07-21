@@ -4,12 +4,12 @@ from pathlib import Path
 import numpy as np
 import torch
 from sklearn.metrics import (accuracy_score, balanced_accuracy_score,
-                             roc_auc_score, roc_curve)
+                             roc_auc_score, roc_curve, confusion_matrix)
 from torch import nn
 from tqdm import tqdm
 
 
-class SaveBestModel:
+class SaveBestModelLoss:
     """
     Save the best model while training.
 
@@ -38,6 +38,36 @@ class SaveBestModel:
             print(f"\nSaving best model for epoch: {epoch+1}\n")
             torch.save(model.state_dict(), str(Path(self.save_path, f'best_model.pth')))
 
+class SaveBestModelAccuracy:
+    """
+    Save the best model while training.
+
+    If the current epoch's validation accuracy is greater than the previous greatest accuracy,
+    then save the model state.
+    """
+    def __init__(self, save_path: str | Path):
+        """
+        Initialize the best validation accuracy to 0.
+
+        :param save_path: Path to save the best model to.
+        """
+        self.best_valid_acc = 0
+        self.save_path = Path(save_path)
+        self.save_path.mkdir(parents=True, exist_ok=True)
+
+    def __call__(self, current_valid_acc: float, epoch: int, model: nn.Module) -> None:
+        """
+        Save the best model if the current validation accuracy is greater than the previous greatest accuracy.
+        :param current_valid_acc: Current validation accuracy.
+        :param epoch: Current epoch.
+        :param model: Model to save.
+        """
+        if current_valid_acc > self.best_valid_acc:
+            self.best_valid_acc = current_valid_acc
+            print(f"\nBest validation accuracy: {self.best_valid_acc}")
+            print(f"\nSaving best model for epoch: {epoch+1}\n")
+            torch.save(model.state_dict(), str(Path(self.save_path, f'best_model.pth')))
+
 
 def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
                       valid_dataset: torch.utils.data.Dataset, num_epochs: int, optimizer: torch.optim.Optimizer,
@@ -63,7 +93,7 @@ def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
         "valid_balanced_accuracy": []
     }
 
-    save_best = SaveBestModel(save_directory)
+    save_best = SaveBestModelAccuracy(save_directory)
 
     for epoch in range(num_epochs):
         train_dataset.shuffle()
@@ -133,7 +163,7 @@ def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
                     f"Balanced accuracy: {round(balanced_accuracy, 3)}, "
                     f"Running Loss: {round(loss_running_valid / i, 3)}")
         scheduler.step()
-        save_best(loss_running_valid / len_valid_dataset, epoch, model)
+        save_best(balanced_accuracy, epoch, model)
         history["valid_loss"].append(loss_running_valid / len_valid_dataset)
         history["valid_balanced_accuracy"].append(balanced_accuracy)
     return history
@@ -164,4 +194,5 @@ def evaluate_model(model: nn.Module, dataloader: torch.utils.data.Dataset) -> di
     if len(np.unique(ground_truths)) == 2:
         metrics["roc_auc"] = roc_auc_score(ground_truths, predictions)
         metrics["roc_curve"] = roc_curve(ground_truths, predictions)
+    metrics["confusion_matrix"] = confusion_matrix(ground_truths, predictions)
     return metrics
