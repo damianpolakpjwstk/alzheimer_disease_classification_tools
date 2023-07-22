@@ -73,7 +73,7 @@ class SaveBestModelAccuracy:
 def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
                       valid_dataset: torch.utils.data.Dataset, num_epochs: int, optimizer: torch.optim.Optimizer,
                       scheduler: torch.optim.lr_scheduler, save_directory: str | Path,
-                      batch_size: int, finetune: bool = False) -> dict[str, list[float]]:
+                      batch_size: int, from_pretrained: bool = False) -> dict[str, list[float]]:
     """
     Train model.
 
@@ -85,8 +85,8 @@ def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
     :param scheduler: Learning rate scheduler.
     :param batch_size: Batch size.
     :param save_directory: Directory to save best model to.
-    :param finetune: If True, freeze all layers except the last one at the beginning of training. After one epoch,
-    unfreeze all layers.
+    :param from_pretrained: If True, freeze all layers except the last one at the beginning of training. After one
+    epoch, unfreeze all the layers.
     :return: History of training.
     """
     history = {
@@ -97,9 +97,11 @@ def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
     }
 
     save_best = SaveBestModelAccuracy(save_directory)
-    if finetune:
+    if from_pretrained:
         model.freeze()
     for epoch in range(num_epochs):
+        if from_pretrained and epoch == 1:
+            model.unfreeze()
         train_dataset.shuffle()
         valid_dataset.shuffle()
         model.train()
@@ -109,8 +111,6 @@ def run_training_loop(model: nn.Module, train_dataset: torch.utils.data.Dataset,
         step = 1
         results, ground_truths = [], []
         for data in prbar:
-            if finetune and epoch == 1:
-                model.unfreeze()
             criterion = torch.nn.CrossEntropyLoss()
             inputs, labels = data
             optimizer.zero_grad()

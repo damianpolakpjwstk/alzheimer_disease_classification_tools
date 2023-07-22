@@ -60,6 +60,13 @@ scans from the BIOCARD dataset. The BIOCARD dataset is not used for training, on
 It uses my implementation of the Pseudo-3D CNN models (https://github.com/damianpolakpjwstk/pseudo3d_pytorch) with
 attention blocks. See the notebook, `imaging_models/model.py` and README in pseudo3d_pytorch repository for more details.
 
+There is also a notebook called `imaging_models/CNN_pretrain.ipynb`. It is used to pretrain the CNN models on the
+IXI dataset (https://brain-development.org/ixi-dataset/). This step is optional.
+
+Another notebook called `imaging_models/architecture_visualization.ipynb` is used to visualize the CNN models 
+architecture with torchviz.
+
+
 TODO: add explanation of the CNN models with Grad-CAM visualization.
 
 ### Installation

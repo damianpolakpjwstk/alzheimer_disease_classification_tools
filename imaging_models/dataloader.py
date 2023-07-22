@@ -9,7 +9,7 @@ import torchio as tio
 class Mri3DDataLoader(torch.utils.data.Dataset):
     """Dataloader for MRI data."""
     def __init__(self, df: pd.DataFrame, classification_values: list[str, ...], augment: bool = False,
-                 batch_size: int = 1) -> None:
+                 batch_size: int = 1, crop: bool = True) -> None:
         """
         Initialize dataloader.
 
@@ -19,9 +19,11 @@ class Mri3DDataLoader(torch.utils.data.Dataset):
         Other values will be ignored.
         :param augment: Augment images using TorchIO. Default is False.
         :param batch_size: Batch size.
+        :param crop: Crop images 20 pixels from each side to reduce margins. Default is True.
         """
         self.df = df
         self.classification_values = classification_values
+        self.crop = crop
 
         self.df = self.df[self.df["DX"].isin(self.classification_values)]
         dummies = pd.get_dummies(self.df["DX"])
@@ -31,7 +33,8 @@ class Mri3DDataLoader(torch.utils.data.Dataset):
             self.augment = tio.Compose([
                 tio.RandomAffine(p=0.5),
                 tio.RandomGamma(p=0.5),
-                tio.RandomSwap(p=0.5)
+                tio.RandomSwap(p=0.5),
+                tio.RescaleIntensity((0, 1), p=1)
             ])
         else:
             self.augment = None
@@ -53,6 +56,8 @@ class Mri3DDataLoader(torch.utils.data.Dataset):
         path = self.df.iloc[idx]["path"]
         image = nib.load(path).get_fdata()
         image = image.astype(np.float32)
+        if self.crop:
+            image = image[20:-20, 20:-20, 20:-20]
         image = np.expand_dims(image, axis=0)
         if self.augment is not None:
             image = self.augment(image)

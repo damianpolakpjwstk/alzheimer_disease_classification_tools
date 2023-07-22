@@ -61,7 +61,7 @@ class MRINet(nn.Module):
     Network for MRI classification.
     """
     def __init__(self, num_classes: int = 2, dropout_value: float | None = 0.2,
-                 use_multiscale_stem: bool = False, base_channels: int = 32) -> None:
+                 use_multiscale_stem: bool = False, base_channels: int = 32, pretrain: bool = False) -> None:
         """
         Initialize the network.
 
@@ -70,9 +70,12 @@ class MRINet(nn.Module):
         :param use_multiscale_stem: whether to use multiscale stem block or not. If False, the network uses
         Pseudo-3D ResNet-like blocks in the stem with MaxPool3d with kernel_size=5 and stride=2.
         :param base_channels: number of output channels of the 1x1x1 convolution in the multiscale stem block.
+        :param pretrain: Set to True to create classificator for pretraining. It uses two fully connected layers
+        instead of one and returns two outputs.
         """
         super().__init__()
         self.base_channels = base_channels
+        self.pretrain = pretrain
 
         self.stem = nn.Sequential(
             P3DBlockTypeA(1, 24, self.base_channels, kernel_size=3, stride=2, dilation=1),
@@ -101,12 +104,20 @@ class MRINet(nn.Module):
 
         self.global_pool = nn.AdaptiveMaxPool3d((1, 1, 1))
         self.classifier = nn.Sequential(
-            nn.Flatten(),
-            nn.Dropout(dropout_value) if dropout_value is not None else nn.Identity(),
-            nn.Linear(256 * 1 * 1 * 1, num_classes),
-        )
+                nn.Flatten(),
+                nn.Dropout(dropout_value) if dropout_value is not None else nn.Identity(),
+                nn.Linear(256 * 1 * 1 * 1, num_classes),
+            )
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        if self.pretrain:
+            self.pretrain_classifier = nn.Sequential(
+                nn.Flatten(),
+                nn.Dropout(dropout_value) if dropout_value is not None else nn.Identity(),
+            )
+            self.output_0 = nn.Linear(256 * 1 * 1 * 1, 1)
+            self.output_1 = nn.Linear(256 * 1 * 1 * 1, 1)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor | tuple[torch.Tensor, torch.Tensor]:
         """Forward pass of the network."""
         x = self.stem(x)
         x = self.attention_block_0(x)
@@ -114,17 +125,24 @@ class MRINet(nn.Module):
         x = self.block2(x)
         x = self.block3(x)
         x = self.global_pool(x)
+        if self.pretrain:
+            x = self.pretrain_classifier(x)
+            output_0 = self.output_0(x)
+            output_1 = self.output_1(x)
+            return output_0, output_1
         x = self.classifier(x)
         return x
 
     def freeze(self):
         """Freeze all layers except the last fully connected layer."""
+        print("Freezing all layers except the last fully connected layer.")
         for name, param in self.named_parameters():
             if "classifier" not in name:
                 param.requires_grad = False
 
     def unfreeze(self):
         """Unfreeze all layers."""
+        print("Unfreezing all layers.")
         for name, param in self.named_parameters():
             param.requires_grad = True
 

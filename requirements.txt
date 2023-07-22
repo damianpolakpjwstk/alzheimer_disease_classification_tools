@@ -12,6 +12,7 @@ torch
 torchio
 torchsummary
 torchvision
+torchviz
 tqdm
 xgboost
 jupyter
