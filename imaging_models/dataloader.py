@@ -57,7 +57,7 @@ class Mri3DDataLoader(torch.utils.data.Dataset):
         image = nib.load(path).get_fdata()
         image = image.astype(np.float32)
         if self.crop:
-            image = image[20:-20, 20:-20, 20:-20]
+            image = image[10:-10, 10:-10, 10:-10]
         image = np.expand_dims(image, axis=0)
         if self.augment is not None:
             image = self.augment(image)
